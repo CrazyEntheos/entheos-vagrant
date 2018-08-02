@@ -1,0 +1,16 @@
+[Unit]
+Description=A Spring Boot application
+After=syslog.target
+
+[Service]
+RestartSec=10
+Restart=on-failure
+Type=simple
+User=root
+ExecStart=/usr/bin/java -jar /opt/app/bin/store-api.jar SuccessExitStatus=143
+#StandardOutput=syslog
+#StandardError=syslog
+#SyslogIdentifier=store-api
+
+[Install]
+WantedBy=multi-user.target
