@@ -47,7 +47,9 @@ Vagrant.configure("2") do |config|
       apt-get install maven -y
     fi
 
-    if [[ -f "/opt/workspace/settings.xml" && ! -z ENV['VAGRANT_HTTP_PROXY']  ]]; then
+    http_proxy_val=#{ENV['VAGRANT_HTTP_PROXY']}
+
+    if [[ -f "/opt/workspace/settings.xml" && ! -z $http_proxy_val ]]; then
         echo "settings.xml file found."
         sudo mkdir -p ~/.m2
         sudo cp -f /opt/workspace/settings.xml ~/.m2/
