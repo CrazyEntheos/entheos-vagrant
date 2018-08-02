@@ -9,11 +9,16 @@ Vagrant Setup.
 ## Proxy setup if required.
 
 set http_proxy=http://proxy.example.com:8888
+
 set https_proxy=%http_proxy%
+
 vagrant plugin install vagrant-proxyconf
 
+
 set VAGRANT_HTTP_PROXY=%http_proxy%
+
 set VAGRANT_HTTPS_PROXY=%http_proxy%
+
 set VAGRANT_NO_PROXY=127.0.0.1,192.168.56.0/24,fashionpeaks.club,localhost
 
 
