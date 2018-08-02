@@ -1,7 +1,7 @@
 # entheos-vagrant
 
 
-## prerequisites
+## Prerequisites
 
 Vagrant Setup.
 
@@ -41,3 +41,20 @@ stage the fashionpeaks.crt and fashionpeaks.key under ssl-certs
 ## Bring the workspace up and running.
 
 vagrant up
+
+## Edit Local HOSTS File
+
+Added below line in C:\Windows\System32\Drivers\etc\hosts (Open Notepad as Administrator for edit) 
+
+192.168.56.10 fashionpeaks.club
+
+## Access the fashionpeaks.club URLs
+
+http://fashionpeaks.club 
+
+https://fashionpeaks.club (Only works with ssl certificates.)
+
+
+
+
+
