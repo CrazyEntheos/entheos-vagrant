@@ -100,7 +100,7 @@ Vagrant.configure("2") do |config|
       sudo cp target/store-api-*.jar /opt/app/bin/store-api.jar
     popd
 
-    cp /opt/workspace/store-api.service /etc/systemd/system/store-api.service
+    cp /opt/workspace/conf/store-api.service /etc/systemd/system/store-api.service
 
     systemctl enable store-api && systemctl daemon-reload && systemctl restart store-api
 
