@@ -8,7 +8,7 @@ Vagrant Setup.
 
 ## Proxy setup if required.
 
-set http_proxy=http://one.proxy.att.com:8888
+set http_proxy=http://proxy.example.com:8888
 set https_proxy=%http_proxy%
 vagrant plugin install vagrant-proxyconf
 

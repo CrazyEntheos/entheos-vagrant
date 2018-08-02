@@ -114,10 +114,10 @@ Vagrant.configure("2") do |config|
       git clean -df
       git pull
       echo "Install npm packages"
-      sudo npm install
-      sudo npm install -g @angular/cli@6.0.0
+      npm install --no-bin-links
+      npm install -g @angular/cli@6.0.0
       echo "Executing ng build"
-      sudo ng build --prod
+      ng build --prod
 
       if [[ -f "/opt/workspace/ssl-certs/fashionpeaks.crt" && -f "/opt/workspace/ssl-certs/fashionpeaks.key"  ]]; then
         echo "ssl certificates exist and configuring application over https"
@@ -133,7 +133,7 @@ Vagrant.configure("2") do |config|
       sudo ln -f -s /etc/nginx/sites-available/fashionpeaks.conf /etc/nginx/sites-enabled/
       sudo mkdir -p /var/www/fashionpeaks
       sudo rm -rf /opt/workspace/code-repos/entheos-ui/dist/fashionpeaks
-      sudo mv /opt/workspace/code-repos/entheos-ui/dist/my-first-app opt/workspace/code-repos/entheos-ui/dist/fashionpeaks
+      sudo mv /opt/workspace/code-repos/entheos-ui/dist/my-first-app /opt/workspace/code-repos/entheos-ui/dist/fashionpeaks
       rsync -a  /opt/workspace/code-repos/entheos-ui/dist/fashionpeaks /var/www
 
       sudo service nginx restart

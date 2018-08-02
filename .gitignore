@@ -42,6 +42,7 @@ Thumbs.db
 .vagrant/*
 *.jar
 settings.xml
-ssl-certs/*
+ssl-certs/*.crt
+ssl-certs/*.key
 code-repos/*
 
