@@ -13,11 +13,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/opt/workspace"
 
-  config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/authorized_keys"
+  config.vm.provision "file", source: ENV['HOME'] + '/.ssh/id_rsa.pub', destination: "~/.ssh/authorized_keys"
 
   config.ssh.insert_key = false
 
-  config.ssh.private_key_path = ["~/.vagrant.d/insecure_private_key", "~/.ssh/id_rsa"]
+  config.ssh.private_key_path = [ENV['HOME'] + '/.vagrant.d/insecure_private_key', ENV['HOME'] + '/.ssh/id_rsa']
 
 #  config.ssh.username = ENV['USERNAME']
 

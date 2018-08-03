@@ -5,6 +5,14 @@
 
 Vagrant Setup.
 
+### SSH key setup
+
+SSH public and private key should be exist.
+
+$HOME/.ssh/id_rsa.pub
+
+$HOME/.ssh/id_rsa
+
 
 ## Proxy setup if required.
 
